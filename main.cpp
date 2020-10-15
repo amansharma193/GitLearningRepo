@@ -45,6 +45,5 @@ inline void solve() {
 
 int main () {
     read();
-	cout<<"in aman branch";
     solve();
 }
