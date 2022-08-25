@@ -7,12 +7,12 @@ pipeline {
             }
             post{
                 success {
-                    echo 'success'
+                    echo '${env.Name}'
                 }
                 failure {
                     echo 'failure'
                 }
-            }
+            }x
         }
         stage('test 2') {
             steps{
