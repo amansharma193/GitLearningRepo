@@ -8,7 +8,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                build job:'test2'
+                build job:'test2', parameters: [string(name: 'Developer', value: "${env.NAME}")]
             }
             post{
                 success {
