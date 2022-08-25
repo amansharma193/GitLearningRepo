@@ -1,18 +1,23 @@
 pipeline {
     agent any
     stages {
+        stage('params'){
+            steps{
+                echo "Name = ${env.NAME}"
+            }
+        }
         stage('build') {
             steps {
                 build job:'test2'
             }
             post{
                 success {
-                    echo '${env.Name}'
+                    echo 'success'
                 }
                 failure {
                     echo 'failure'
                 }
-            }x
+            }
         }
         stage('test 2') {
             steps{
