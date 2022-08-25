@@ -1,7 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage('run') {
+        stage('test') {
+            steps{
+                build job: 'test2'
+            }
+        }
+        stage('deploy') {
             steps {
                 sh 'mvn -version'
             }
